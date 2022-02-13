@@ -37,9 +37,9 @@ contract ForeverWave {
 
     function wave(string memory _message) public {
 
-        // check at least 15 mins have passed between waves
+        // check at least 5 mins have passed between waves
 
-        require(lastWavedAt[msg.sender] + 15 minutes < block.timestamp, "Please Wait 15 minutes from when you last posted");
+        require(lastWavedAt[msg.sender] + 5 minutes < block.timestamp, "Please Wait 5 minutes between waves");
 
         // update timestamp for user
 
